@@ -51,10 +51,45 @@ main {
     width: 90%;
     max-width: 337.5px;
     height: auto;
-    /* margin: 0 auto; */
     border-radius: 25px;
     background-color: white;
+    padding-top: 130px;
     padding-bottom: 50px;
+}
+
+.pic {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    /* background-image: url('./images/illustration-woman-online-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain; */
+    position: relative;
+    top: 135px;
+}
+
+.pic::before {
+    content: '';
+    background-image: url('./images/bg-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 115px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.pic::after {
+    content: '';
+    background-image: url('./images/illustration-woman-online-mobile.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
 }
 
 .title_faq {
@@ -62,7 +97,7 @@ main {
     font-size: 3.5rem;
     font-weight: 700;
     color: var(--verydarkdesaturatedblue);
-    padding: 20px 0 10px;
+    padding: 0 0 10px;
 }
 
 .faqs {
@@ -97,6 +132,7 @@ main {
     font-weight: 400;
     color: var(--darkgrayishblue);
     display: none;
+    transition: 0.5s;
 }
 
 .accordion-1,
