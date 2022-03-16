@@ -43,20 +43,6 @@ body {
 main {
     width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
-    width: 90%;
-    max-width: 337.5px;
-    height: auto;
-    border-radius: 25px;
-    background-color: white;
-    padding-top: 130px;
-    padding-bottom: 50px;
 }
 
 .pic {
@@ -91,6 +77,17 @@ main {
     z-index: 2;
 }
 
+.container {
+    width: 90%;
+    max-width: 337.5px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 25px;
+    background-color: white;
+    padding-top: 130px;
+    padding-bottom: 50px;
+}
+
 .title_faq {
     text-align: center;
     font-size: 3.5rem;
@@ -107,7 +104,7 @@ main {
 
 .question_div {
     width: 100%;
-    padding: 10px 0 15px;
+    padding: 20px 0;
     border-bottom: 1px solid var(--lightgrayishblue);
 }
 
@@ -175,7 +172,7 @@ footer {
 }
 
 .attribution { 
-    font-size: 11px; text-align: center; 
+    font-size: 11px; 
 }
 
 .attribution a { 
