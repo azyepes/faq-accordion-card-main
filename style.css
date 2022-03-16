@@ -76,15 +76,6 @@ main {
     border-bottom: 1px solid var(--lightgrayishblue);
 }
 
-/* .question {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-} */
-
 .menu_title {
     color: var(--verydarkdesaturatedblue);
     cursor: pointer;
@@ -99,42 +90,44 @@ main {
     font-weight: 400;
 }
 
-.menu_title:hover {
-    color: var(--softred);
-}
-
 .panel {
+    width: 87%;
     padding-top: 10px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 400;
     color: var(--darkgrayishblue);
     display: none;
 }
 
-.accordion-1, .accordion-2, .accordion-3, .accordion-4, .accordion-5 {
+.accordion-1,
+.accordion-2,
+.accordion-3,
+.accordion-4,
+.accordion-5 {
     display: none;
 }
 
-#accordion-1:checked, div > label {
+#accordion-1:checked ~ .menu_title > img,
+#accordion-2:checked ~ .menu_title > img,
+#accordion-3:checked ~ .menu_title > img,
+#accordion-4:checked ~ .menu_title > img,
+#accordion-5:checked ~ .menu_title > img {
+    transform: rotate(180deg);
+}
+
+#accordion-1:checked ~ .menu_title > h2,
+#accordion-2:checked ~ .menu_title > h2,
+#accordion-3:checked ~ .menu_title > h2,
+#accordion-4:checked ~ .menu_title > h2,
+#accordion-5:checked ~ .menu_title > h2 {
+    color: var(--verydarkdesaturatedblue);
     font-weight: 700;
 }
 
-#accordion-1:checked ~ .panel {
-    display: block;
-}
-
-#accordion-2:checked ~ .panel {
-    display: block;
-}
-
-#accordion-3:checked ~ .panel {
-    display: block;
-}
-
-#accordion-4:checked ~ .panel {
-    display: block;
-}
-
+#accordion-1:checked ~ .panel,
+#accordion-2:checked ~ .panel,
+#accordion-3:checked ~ .panel,
+#accordion-4:checked ~ .panel,
 #accordion-5:checked ~ .panel {
     display: block;
 }
@@ -146,4 +139,11 @@ main {
 .attribution a { 
     /* color: hsl(228, 45%, 44%);  */
     color: #ccc;
+}
+
+@media screen and (min-width: 1024px) {
+    .menu_title:hover h2 {
+        font-weight: 700;
+        color: var(--softred);
+    }
 }
