@@ -1,0 +1,149 @@
+:root {
+    /* Colors */
+    /* Primary */
+    /* Text */
+    --verydarkdesaturatedblue: hsl(238, 29%, 16%);
+    --softred: hsl(14, 88%, 65%);
+
+    /* Gradient */
+    /* Background gradient: */
+    --softviolet: hsl(273, 75%, 66%);
+    --softblue: hsl(240, 73%, 65%);
+
+    /* Neutral */
+    /* Text */
+    --verydarkgrayishblue: hsl(237, 12%, 33%);
+    --darkgrayishblue: hsl(240, 6%, 50%);
+
+    /* Dividers */
+    --lightgrayishblue: hsl(240, 5%, 91%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(var(--softviolet), var(--softblue));
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 337.5px;
+    height: auto;
+    /* margin: 0 auto; */
+    border-radius: 25px;
+    background-color: white;
+    padding-bottom: 50px;
+}
+
+.title_faq {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--verydarkdesaturatedblue);
+    padding: 20px 0 10px;
+}
+
+.faqs {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.question_div {
+    width: 100%;
+    padding: 10px 0 15px;
+    border-bottom: 1px solid var(--lightgrayishblue);
+}
+
+/* .question {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+} */
+
+.menu_title {
+    color: var(--verydarkdesaturatedblue);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu_title h2 { 
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.menu_title:hover {
+    color: var(--softred);
+}
+
+.panel {
+    padding-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--darkgrayishblue);
+    display: none;
+}
+
+.accordion-1, .accordion-2, .accordion-3, .accordion-4, .accordion-5 {
+    display: none;
+}
+
+#accordion-1:checked, div > label {
+    font-weight: 700;
+}
+
+#accordion-1:checked ~ .panel {
+    display: block;
+}
+
+#accordion-2:checked ~ .panel {
+    display: block;
+}
+
+#accordion-3:checked ~ .panel {
+    display: block;
+}
+
+#accordion-4:checked ~ .panel {
+    display: block;
+}
+
+#accordion-5:checked ~ .panel {
+    display: block;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    /* color: hsl(228, 45%, 44%);  */
+    color: #ccc;
+}
